@@ -1,0 +1,7 @@
+# Tracing options for the org.chico.uclm.teaw.diagram plug-in
+
+# Common issues
+org.chico.uclm.teaw.diagram/debug=false
+
+# Visual IDs
+org.chico.uclm.teaw.diagram/debug/visualID=false
