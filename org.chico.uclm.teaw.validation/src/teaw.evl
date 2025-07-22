@@ -1,0 +1,93 @@
+// Plannification diagram
+context Planning {
+	
+	constraint NodesSize {
+		check {
+    		var n = PlanningNode.all.size();
+    		return n < 12;
+    	} 
+    	message : "You can specify a maximum of 12 elements"
+	}
+	
+	constraint PrizeMandatory {
+		check {
+    		var n = Prize.all.size();
+    		return n > 0;
+    	} 
+    	message : "You must include at least one award in the plannification"
+	}
+
+}
+
+context PlanningNode {
+
+  	critique HasOrder {
+    	check : self.order != Order#None
+    	message : "The order must be specified"
+  	}
+  	
+  	constraint HasImage {
+    	check : self.imagePath != null
+    	message : "The image path must be specified"
+  	}
+
+}
+
+
+// Emotions diagram
+context EmotionsPicto {
+
+  	constraint HasImage {
+    	check : self.imagePath != null
+    	message : "The image path must be specified"
+  	}
+
+}
+
+context Emotions {
+
+	constraint OnlyOneGreenLink {
+    	check {
+    		var n = GreenLink.all.size();
+    		return n <= 1;
+    	} 
+    	message : "You must specify only one correct link"
+    	fix {
+			title : 'Remove duplicated correct link'
+			do {
+				delete self;
+			}
+		}
+  	}
+
+}
+
+// Links
+context GreenLink {
+
+	constraint notEmptyFeedback {
+    	check : self.npFeedback.isDefined()
+    	message : "The correct solution must have one positive feedback"
+  	}
+
+
+  	constraint HasNegativeFeedback {
+    	check : self.npFeedback.isDefined() and self.npFeedback.isKindOf(PositiveFeedback)
+    	message : "The correct solution can't have a negative feedback"
+  	}
+
+}
+
+context RedLink {
+
+	constraint notEmptyFeedback {
+    	check : self.npFeedback.isDefined()
+    	message : "The incorrect solution must have one negative feedback"
+  	}
+
+  	constraint HasPositiveFeedback {
+    	check : self.npFeedback.isDefined() and self.npFeedback.isKindOf(NegativeFeedback)
+    	message : "The incorrect solution can't have a positive feedback"
+  	}
+
+}

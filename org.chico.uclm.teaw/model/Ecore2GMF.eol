@@ -1,0 +1,57 @@
+var palette = GmfTool!Palette.all.first();
+var currentTools = palette.tools;
+
+var toolGroupPlanning = new GmfTool!ToolGroup;
+toolGroupPlanning.title = "Planning";
+toolGroupPlanning.collapsible = true;
+var toolGroupEmotions = new GmfTool!ToolGroup;
+toolGroupEmotions.title = "Emotions";
+toolGroupEmotions.collapsible = true;
+palette.tools.add(toolGroupPlanning);
+palette.tools.add(toolGroupEmotions);
+
+var toolGroupObjects = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Objects');
+var toolGroupConnections = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Connections');
+
+var PlanningNodes : Sequence = Sequence{"Planning","Sep","Action","Person","Place","Sep","AAC Notebook",
+									"Award","Social story","Entertainment/Calming activity","Time management","Remaining time","Sep"};
+var PlanningLinks : Sequence = Sequence{"Sequence/order"};
+var EmotionsNodes : Sequence = Sequence{"Emotions","Sep","Target emotion","Response option","Positive feedback","Negative feedback","Sep"};
+var EmotionsLinks : Sequence = Sequence{"Correct solution","Incorrect solution"};
+
+objectsConnectionsToPalette(PlanningNodes, toolGroupPlanning, true);
+objectsConnectionsToPalette(PlanningLinks, toolGroupPlanning, false);
+objectsConnectionsToPalette(EmotionsNodes, toolGroupEmotions, true);
+objectsConnectionsToPalette(EmotionsLinks, toolGroupEmotions, false);
+
+delete toolGroupObjects;
+delete toolGroupConnections;
+
+operation objectsConnectionsToPalette(myseq: Sequence, mytg: GmfTool!ToolGroup, isObject: Boolean) {
+	var toolEntry;
+	for (o in myseq) {
+		if (o.matches('Sep')) {
+			mytg.tools.add(new GmfTool!PaletteSeparator);
+		} else {
+			if (isObject) {
+				toolEntry = toolGroupObjects.tools.selectOne(r|r.title = o);
+			} else {
+				toolEntry = toolGroupConnections.tools.selectOne(r|r.title = o);
+			}
+			mytg.tools.add(toolEntry);
+		}
+	}
+}
+
+operation configureListFigures(nodeFigure: String) {
+	var objectFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = nodeFigure);
+    
+    delete objectFigure.border;
+	objectFigure.outline = false;
+	
+	var size = new GmfGraph!Dimension;
+	size.dx = 200;
+	size.dy = 16;
+
+	objectFigure.preferredSize = size;
+}

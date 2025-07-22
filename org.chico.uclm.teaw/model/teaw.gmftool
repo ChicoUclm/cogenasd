@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="teawPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Planning"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Planning"
+          description="Create new Planning">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/planning_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:PaletteSeparator"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Action"
+          description="Create new Action">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/action_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/action_arasaac128.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Person"
+          description="Create new Person">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/person_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/person_arasaac128.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Place"
+          description="Create new Place">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/place_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/place_arasaac128.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:PaletteSeparator"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="AAC Notebook"
+          description="Create new AAC Notebook">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/notebook_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/notebook_arasaac64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Award"
+          description="Create new Award">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/prize_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/prize_arasaac64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Social story"
+          description="Create new Social story">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/story_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/story_arasaac64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Entertainment/Calming activity"
+          description="Create new Entertainment/Calming activity">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/object_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/object_arasaac64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Time management"
+          description="Create new Time management">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/time_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/time_arasaac64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Remaining time"
+          description="Create new Remaining time">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/remaining_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/remaining_arasaac64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:PaletteSeparator"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Sequence/order"
+          description="Create new Sequence/order">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/link32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Emotions"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Emotions"
+          description="Create new Emotions">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/emotions_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:PaletteSeparator"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Target emotion"
+          description="Create new Target emotion">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/emochoice_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/emochoice_arasaac128.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Response option"
+          description="Create new Response option">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/emotion_arasaac32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/emotion_arasaac128.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Positive feedback"
+          description="Create new Positive feedback">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/positiveFeedback32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/positiveFeedback64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Negative feedback"
+          description="Create new Negative feedback">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/negativeFeedback32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/negativeFeedback64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:PaletteSeparator"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Correct solution"
+          description="Create new Correct solution">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/ok32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Incorrect solution"
+          description="Create new Incorrect solution">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/wrong32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="teaw_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="teaw_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="teaw.diagram.part.TeawDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/TeawDiagramFile.gif"
+         extensions="teaw_diagram"
+         default="true"
+         class="teaw.diagram.part.TeawDiagramEditor"
+         matchingStrategy="teaw.diagram.part.TeawMatchingStrategy"
+         contributorClass="teaw.diagram.part.TeawDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="teaw.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/TeawDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="teaw.diagram.part.TeawCreationWizard"
+  	     id="teaw.diagram.part.TeawCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="org.chico.uclm.teaw.diagram.InitDiagram"
+            nameFilter="*.teaw"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="teaw.diagram.part.TeawInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.chico.uclm.teaw.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="TeawPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="teaw.diagram.part.TeawDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="TeawPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="teaw.diagram.part.TeawDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="TeawPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="teaw.diagram.part.TeawDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="TeawRender">
+         <Priority name="Lowest"/>
+         <ViewId id="teaw.diagram.part.TeawDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="teaw.diagram.providers.TeawMarkerNavigationProvider">
+         <MarkerType name="org.chico.uclm.teaw.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="Teaw Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="teaw.diagram.providers.TeawValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="teaw.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="org.chico.uclm.teaw.diagram.general"
+            name="%prefpage.org.chico.uclm.teaw.diagram.general"
+            class="teaw.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="org.chico.uclm.teaw.diagram.appearance"
+            name="%prefpage.org.chico.uclm.teaw.diagram.appearance"
+            category="org.chico.uclm.teaw.diagram.general"
+            class="teaw.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="org.chico.uclm.teaw.diagram.connections"
+            name="%prefpage.org.chico.uclm.teaw.diagram.connections"
+            category="org.chico.uclm.teaw.diagram.general"
+            class="teaw.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="org.chico.uclm.teaw.diagram.printing"
+            name="%prefpage.org.chico.uclm.teaw.diagram.printing"
+            category="org.chico.uclm.teaw.diagram.general"
+            class="teaw.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="org.chico.uclm.teaw.diagram.rulersAndGrid"
+            name="%prefpage.org.chico.uclm.teaw.diagram.rulersAndGrid"
+            category="org.chico.uclm.teaw.diagram.general"
+            class="teaw.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="org.chico.uclm.teaw.diagram"
+            labelProvider="teaw.diagram.sheet.TeawSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="org.chico.uclm.teaw.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="org.chico.uclm.teaw.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="teaw.diagram.sheet.TeawPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="teaw.diagram.navigator.TeawAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="teaw.diagram.providers.TeawViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="teaw"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Teaw"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3011,3012,3003,3004,3005,3006,3007,3008,3009,3013,3010"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="teaw.diagram.providers.TeawEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Teaw"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,3001,3002,3011,3012,3003,3004,3005,3006,3007,3008,3009,3013,3010"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfTEAWDiagramEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.TEAWDiagramEditPart" id="TEAWDiagram_1000"/>
+         <context elements="TEAWDiagram_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfEmotionsEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.EmotionsEditPart" id="Emotions_2001"/>
+         <context elements="Emotions_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfPlanningEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.PlanningEditPart" id="Planning_2002"/>
+         <context elements="Planning_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfEmotionChoiceEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.EmotionChoiceEditPart" id="EmotionChoice_3001"/>
+         <context elements="EmotionChoice_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfEmotionEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.EmotionEditPart" id="Emotion_3002"/>
+         <context elements="Emotion_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfPositiveFeedbackEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.PositiveFeedbackEditPart" id="PositiveFeedback_3011"/>
+         <context elements="PositiveFeedback_3011"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfNegativeFeedbackEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.NegativeFeedbackEditPart" id="NegativeFeedback_3012"/>
+         <context elements="NegativeFeedback_3012"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfPersonEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.PersonEditPart" id="Person_3003"/>
+         <context elements="Person_3003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfActionEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.ActionEditPart" id="Action_3004"/>
+         <context elements="Action_3004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfPlaceEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.PlaceEditPart" id="Place_3005"/>
+         <context elements="Place_3005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfWaitTimeEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.WaitTimeEditPart" id="WaitTime_3006"/>
+         <context elements="WaitTime_3006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfPrizeEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.PrizeEditPart" id="Prize_3007"/>
+         <context elements="Prize_3007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfSocialStoryEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.SocialStoryEditPart" id="SocialStory_3008"/>
+         <context elements="SocialStory_3008"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfSoothingObjectEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.SoothingObjectEditPart" id="SoothingObject_3009"/>
+         <context elements="SoothingObject_3009"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfReaminingObjectEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.ReaminingObjectEditPart" id="ReaminingObject_3013"/>
+         <context elements="ReaminingObject_3013"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfCommunicationBookEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.CommunicationBookEditPart" id="CommunicationBook_3010"/>
+         <context elements="CommunicationBook_3010"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="teaw.diagram.providers.TeawIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="teaw.diagram.providers.TeawParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="teaw.diagram.providers.TeawShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.TEAWDiagram_1000"
+               name="%metatype.name.TEAWDiagram_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TEAWDiagram"
+               edithelper="teaw.diagram.edit.helpers.TEAWDiagramEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.Emotions_2001"
+               name="%metatype.name.Emotions_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Emotions"
+               edithelper="teaw.diagram.edit.helpers.EmotionsEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.Planning_2002"
+               name="%metatype.name.Planning_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Planning"
+               edithelper="teaw.diagram.edit.helpers.PlanningEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.EmotionChoice_3001"
+               name="%metatype.name.EmotionChoice_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EmotionChoice"
+               edithelper="teaw.diagram.edit.helpers.EmotionChoiceEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.Emotion_3002"
+               name="%metatype.name.Emotion_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Emotion"
+               edithelper="teaw.diagram.edit.helpers.EmotionEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.PositiveFeedback_3011"
+               name="%metatype.name.PositiveFeedback_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PositiveFeedback"
+               edithelper="teaw.diagram.edit.helpers.PositiveFeedbackEditHelper">
+            <param name="semanticHint" value="3011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.NegativeFeedback_3012"
+               name="%metatype.name.NegativeFeedback_3012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NegativeFeedback"
+               edithelper="teaw.diagram.edit.helpers.NegativeFeedbackEditHelper">
+            <param name="semanticHint" value="3012"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.Person_3003"
+               name="%metatype.name.Person_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Person"
+               edithelper="teaw.diagram.edit.helpers.PersonEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.Action_3004"
+               name="%metatype.name.Action_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Action"
+               edithelper="teaw.diagram.edit.helpers.ActionEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.Place_3005"
+               name="%metatype.name.Place_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Place"
+               edithelper="teaw.diagram.edit.helpers.PlaceEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.WaitTime_3006"
+               name="%metatype.name.WaitTime_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="WaitTime"
+               edithelper="teaw.diagram.edit.helpers.WaitTimeEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.Prize_3007"
+               name="%metatype.name.Prize_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Prize"
+               edithelper="teaw.diagram.edit.helpers.PrizeEditHelper">
+            <param name="semanticHint" value="3007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.SocialStory_3008"
+               name="%metatype.name.SocialStory_3008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SocialStory"
+               edithelper="teaw.diagram.edit.helpers.SocialStoryEditHelper">
+            <param name="semanticHint" value="3008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.SoothingObject_3009"
+               name="%metatype.name.SoothingObject_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SoothingObject"
+               edithelper="teaw.diagram.edit.helpers.SoothingObjectEditHelper">
+            <param name="semanticHint" value="3009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.ReaminingObject_3013"
+               name="%metatype.name.ReaminingObject_3013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ReaminingObject"
+               edithelper="teaw.diagram.edit.helpers.ReaminingObjectEditHelper">
+            <param name="semanticHint" value="3013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.CommunicationBook_3010"
+               name="%metatype.name.CommunicationBook_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CommunicationBook"
+               edithelper="teaw.diagram.edit.helpers.CommunicationBookEditHelper">
+            <param name="semanticHint" value="3010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.NormalLink_4001"
+               name="%metatype.name.NormalLink_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NormalLink"
+               edithelper="teaw.diagram.edit.helpers.NormalLinkEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.RedLink_4002"
+               name="%metatype.name.RedLink_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RedLink"
+               edithelper="teaw.diagram.edit.helpers.RedLinkEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.GreenLink_4003"
+               name="%metatype.name.GreenLink_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="GreenLink"
+               edithelper="teaw.diagram.edit.helpers.GreenLinkEditHelper">
+            <param name="semanticHint" value="4003"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="org.chico.uclm.teaw.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="org.chico.uclm.teaw.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="org.chico.uclm.teaw.diagram.TypeContext">
+         <elementType ref="org.chico.uclm.teaw.diagram.TEAWDiagram_1000"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.Emotions_2001"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.Planning_2002"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.EmotionChoice_3001"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.Emotion_3002"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.PositiveFeedback_3011"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.NegativeFeedback_3012"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.Person_3003"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.Action_3004"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.Place_3005"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.WaitTime_3006"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.Prize_3007"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.SocialStory_3008"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.SoothingObject_3009"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.ReaminingObject_3013"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.CommunicationBook_3010"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.NormalLink_4001"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.RedLink_4002"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.GreenLink_4003"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="org.chico.uclm.teaw.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="org.chico.uclm.teaw.diagram"
+           properties="isURIEditorInput"
+           class="teaw.diagram.part.TeawUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="org.chico.uclm.teaw.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="org.chico.uclm.teaw.diagram"
+           properties="isShortcut"
+           class="teaw.diagram.part.TeawShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="org.chico.uclm.teaw.diagram.resourceContent"/>
+			<contentExtension pattern="org.chico.uclm.teaw.diagram.domainResourceContent"/>
+            <contentExtension pattern="org.chico.uclm.teaw.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="org.chico.uclm.teaw.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="org.chico.uclm.teaw.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="teaw.diagram.navigator.TeawNavigatorContentProvider" 
+            labelProvider="teaw.diagram.navigator.TeawNavigatorLabelProvider"
+            icon="icons/obj16/TeawDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="teaw_diagram"/>
+               </and>
+               <instanceof value="teaw.diagram.navigator.TeawAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="org.chico.uclm.teaw.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="teaw.diagram.navigator.TeawAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="org.chico.uclm.teaw.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="org.chico.uclm.teaw.diagram.navigatorSorter" 
+               class="teaw.diagram.navigator.TeawNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="teaw_diagram"/>
+                  </and>
+                  <instanceof value="teaw.diagram.navigator.TeawAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="org.chico.uclm.teaw.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="teaw.diagram.navigator.TeawDomainNavigatorContentProvider" 
+            labelProvider="teaw.diagram.navigator.TeawDomainNavigatorLabelProvider"
+            icon="icons/obj16/TeawDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="teaw"/>
+               </and>
+               <instanceof value="teaw.diagram.navigator.TeawDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="teaw.diagram.navigator.TeawDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="org.chico.uclm.teaw.diagram.navigatorActionProvider"
+            class="teaw.diagram.navigator.TeawNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="teaw.diagram.navigator.TeawAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="org.chico.uclm.teaw.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="org.chico.uclm.teaw.diagram.navigatorLinkHelper"
+            class="teaw.diagram.navigator.TeawNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="org.chico.uclm.teaw.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="teaw.diagram.navigator.TeawAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="teaw.diagram.part.TeawDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="teaw.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="teaw.diagram.updateDiagram"
+         contextId="teaw.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="org.chico.uclm.teaw.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="teaw.diagram.part.TeawDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="teaw.diagram.edit.parts.TEAWDiagramEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="teaw.diagram.part.TeawDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="org.chico.uclm.teaw.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="teaw.diagram.part.TeawDiagramEditorID"
+         defaultHandler="teaw.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition">
+  <gmfgraph:Canvas name="teaw">
+    <figures name="Default">
+      <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+        <template/>
+        <template x="-2" y="2"/>
+        <template x="-2" y="-2"/>
+        <template/>
+      </figures>
+      <descriptors name="EmotionsFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EmotionsFigure">
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="EmotionsLabelFigure" text="Emotions">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="EmotionsEmotionsCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigureEmotionsLabelFigure" figure="/0/@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+        <accessors accessor="getEmotionsEmotionsCompartmentFigure" figure="/0/@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      </descriptors>
+      <descriptors name="PlanningFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="PlanningFigure">
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="PlanningLabelFigure" text="Planning">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="PlanningPlanningNodesCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigurePlanningLabelFigure" figure="/0/@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+        <accessors accessor="getPlanningPlanningNodesCompartmentFigure" figure="/0/@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      </descriptors>
+      <descriptors name="PersonFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="PersonFigure" qualifiedClassName="org.chico.uclm.teaw.figures.PersonFigure">
+          <preferredSize dx="128" dy="128"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="ActionFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="ActionFigure" qualifiedClassName="org.chico.uclm.teaw.figures.ActionFigure">
+          <preferredSize dx="128" dy="128"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="PlaceFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="PlaceFigure" qualifiedClassName="org.chico.uclm.teaw.figures.PlaceFigure">
+          <preferredSize dx="128" dy="128"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="WaitTimeFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="WaitTimeFigure" qualifiedClassName="org.chico.uclm.teaw.figures.TimeFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="PrizeFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="PrizeFigure" qualifiedClassName="org.chico.uclm.teaw.figures.PrizeFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="SocialStoryFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="SocialStoryFigure" qualifiedClassName="org.chico.uclm.teaw.figures.StoryFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="SoothingObjectFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="SoothingObjectFigure" qualifiedClassName="org.chico.uclm.teaw.figures.ObjectFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="ReaminingObjectFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="ReaminingObjectFigure" qualifiedClassName="org.chico.uclm.teaw.figures.RemainingFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="CommunicationBookFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="CommunicationBookFigure" qualifiedClassName="org.chico.uclm.teaw.figures.NotebookFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="EmotionChoiceFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="EmotionChoiceFigure" qualifiedClassName="org.chico.uclm.teaw.figures.EmotionChoiceFigure">
+          <preferredSize dx="128" dy="128"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="EmotionFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="EmotionFigure" qualifiedClassName="org.chico.uclm.teaw.figures.EmotionFigure">
+          <preferredSize dx="128" dy="128"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="PositiveFeedbackFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="PositiveFeedbackFigure" qualifiedClassName="org.chico.uclm.teaw.figures.PosFeedbackFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="NegativeFeedbackFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="NegativeFeedbackFigure" qualifiedClassName="org.chico.uclm.teaw.figures.NegFeedbackFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="NormalLinkFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="NormalLinkFigure" lineWidth="3" targetDecoration="/0/@figures.0/@figures.0">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" red="82" green="82" blue="82"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="RedLinkFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RedLinkFigure" lineWidth="2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" red="233" green="34" blue="43"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="GreenLinkFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="GreenLinkFigure" lineWidth="2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" green="217" blue="60"/>
+        </actualFigure>
+      </descriptors>
+    </figures>
+    <nodes name="Emotions" figure="EmotionsFigure"/>
+    <nodes name="Planning" figure="PlanningFigure"/>
+    <nodes name="Person" figure="PersonFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="128" dy="128"/>
+      </facets>
+    </nodes>
+    <nodes name="Action" figure="ActionFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="128" dy="128"/>
+      </facets>
+    </nodes>
+    <nodes name="Place" figure="PlaceFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="128" dy="128"/>
+      </facets>
+    </nodes>
+    <nodes name="WaitTime" figure="WaitTimeFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="Prize" figure="PrizeFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="SocialStory" figure="SocialStoryFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="SoothingObject" figure="SoothingObjectFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="ReaminingObject" figure="ReaminingObjectFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="CommunicationBook" figure="CommunicationBookFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="EmotionChoice" figure="EmotionChoiceFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="128" dy="128"/>
+      </facets>
+    </nodes>
+    <nodes name="Emotion" figure="EmotionFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="128" dy="128"/>
+      </facets>
+    </nodes>
+    <nodes name="PositiveFeedback" figure="PositiveFeedbackFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="NegativeFeedback" figure="NegativeFeedbackFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <connections name="NormalLink" figure="NormalLinkFigure"/>
+    <connections name="RedLink" figure="RedLinkFigure"/>
+    <connections name="GreenLink" figure="GreenLinkFigure"/>
+    <compartments name="EmotionsEmotionsCompartment" figure="EmotionsFigure" accessor="/0/@figures.0/@descriptors.0/@accessors.1"/>
+    <compartments name="PlanningPlanningNodesCompartment" figure="PlanningFigure" accessor="/0/@figures.0/@descriptors.1/@accessors.1"/>
+    <labels name="EmotionsLabel" figure="EmotionsFigure" accessor="/0/@figures.0/@descriptors.0/@accessors.0"/>
+    <labels name="PlanningLabel" figure="PlanningFigure" accessor="/0/@figures.0/@descriptors.1/@accessors.0"/>
+  </gmfgraph:Canvas>
+  <gmfgraph:Label name="PersonLabelFigure" text="Person"/>
+  <gmfgraph:Label name="ActionLabelFigure" text="Action"/>
+  <gmfgraph:Label name="PlaceLabelFigure" text="Place"/>
+  <gmfgraph:Label name="WaitTimeLabelFigure" text="WaitTime"/>
+  <gmfgraph:Label name="PrizeLabelFigure" text="Prize"/>
+  <gmfgraph:Label name="SocialStoryLabelFigure" text="SocialStory"/>
+  <gmfgraph:Label name="SoothingObjectLabelFigure" text="SoothingObject"/>
+  <gmfgraph:Label name="ReaminingObjectLabelFigure" text="ReaminingObject"/>
+  <gmfgraph:Label name="CommunicationBookLabelFigure" text="CommunicationBook"/>
+  <gmfgraph:Label name="EmotionChoiceLabelFigure" text="EmotionChoice"/>
+  <gmfgraph:Label name="EmotionLabelFigure" text="Emotion"/>
+  <gmfgraph:Label name="PositiveFeedbackLabelFigure" text="PositiveFeedback"/>
+  <gmfgraph:Label name="NegativeFeedbackLabelFigure" text="NegativeFeedback"/>
+</xmi:XMI>

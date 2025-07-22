@@ -1,0 +1,2 @@
+var genPlugin = GmfGen!GenPlugin.all.first();
+genPlugin.requiredPlugins.add("org.chico.uclm.teaw.figures");

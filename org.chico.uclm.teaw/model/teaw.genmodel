@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/org.chico.uclm.teaw/src" modelPluginID="org.chico.uclm.teaw"
+    modelName="Teaw" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>teaw.emf</foreignModel>
+  <genPackages prefix="Teaw" disposableProviderFactory="true" ecorePackage="teaw.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="teaw.ecore#//Order">
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/None"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/First"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Second"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Third"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Fourth"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Fifth"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Sixth"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Seventh"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Eighth"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Ninth"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Tenth"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Eleventh"/>
+      <genEnumLiterals ecoreEnumLiteral="teaw.ecore#//Order/Twelfth"/>
+    </genEnums>
+    <genClasses ecoreClass="teaw.ecore#//TEAWDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//TEAWDiagram/itsNodes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="teaw.ecore#//Node"/>
+    <genClasses image="false" ecoreClass="teaw.ecore#//PlanningNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/imagePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/size"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="teaw.ecore#//EmotionsNode"/>
+    <genClasses ecoreClass="teaw.ecore#//Emotions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Emotions/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//Emotions/emotions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//Emotions/redLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//Emotions/greenLink"/>
+    </genClasses>
+    <genClasses ecoreClass="teaw.ecore#//Planning">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Planning/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//Planning/planningNodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//Planning/normalLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="teaw.ecore#//Picto"/>
+    <genClasses ecoreClass="teaw.ecore#//Person"/>
+    <genClasses ecoreClass="teaw.ecore#//Action"/>
+    <genClasses ecoreClass="teaw.ecore#//Place"/>
+    <genClasses ecoreClass="teaw.ecore#//Transiction"/>
+    <genClasses ecoreClass="teaw.ecore#//WaitTime"/>
+    <genClasses ecoreClass="teaw.ecore#//Prize"/>
+    <genClasses ecoreClass="teaw.ecore#//SocialStory"/>
+    <genClasses ecoreClass="teaw.ecore#//SoothingObject"/>
+    <genClasses ecoreClass="teaw.ecore#//ReaminingObject"/>
+    <genClasses ecoreClass="teaw.ecore#//CommunicationBook"/>
+    <genClasses image="false" ecoreClass="teaw.ecore#//EmotionsPicto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsPicto/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsPicto/imagePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsPicto/size"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="teaw.ecore#//Feedback"/>
+    <genClasses ecoreClass="teaw.ecore#//EmotionChoice"/>
+    <genClasses ecoreClass="teaw.ecore#//Emotion"/>
+    <genClasses ecoreClass="teaw.ecore#//PositiveFeedback"/>
+    <genClasses ecoreClass="teaw.ecore#//NegativeFeedback"/>
+    <genClasses image="false" ecoreClass="teaw.ecore#//Link"/>
+    <genClasses ecoreClass="teaw.ecore#//NormalLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//NormalLink/origin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//NormalLink/target"/>
+    </genClasses>
+    <genClasses ecoreClass="teaw.ecore#//RedLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//RedLink/origin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//RedLink/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//RedLink/npFeedback"/>
+    </genClasses>
+    <genClasses ecoreClass="teaw.ecore#//GreenLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//GreenLink/origin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//GreenLink/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference teaw.ecore#//GreenLink/npFeedback"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

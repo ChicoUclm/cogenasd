@@ -1,0 +1,195 @@
+@gmf
+@namespace(uri="teaw", prefix="teaw")
+package teaw;
+
+@gmf.diagram()
+class TEAWDiagram {
+	val Node[*] itsNodes;
+}
+
+abstract class Node {
+}
+
+/*
+* CATEGORIAS
+*/
+abstract class PlanningNode {
+	attr String description;
+	attr String imagePath;
+	attr Order order;
+	attr Integer size;
+}
+
+abstract class EmotionsNode {
+}
+
+enum Order {
+	None;
+	First;
+	Second;
+	Third;
+	Fourth;
+	Fifth;
+	Sixth;
+	Seventh;
+	Eighth;
+	Ninth;
+	Tenth;
+	Eleventh;
+	Twelfth;
+}
+
+@gmf.node(label="name", tool.name="Emotions",
+			tool.small.bundle="org.chico.uclm.teaw.figures", tool.small.path="images/emotions_arasaac32.png")
+class Emotions extends Node {
+	attr String name = "<Emotions ...>";
+	@gmf.compartment(layout="free", collapsible="false") 
+	val EmotionsNode[*] emotions;
+	val RedLink[*] redLinks;
+	val GreenLink[1] greenLink; // only one, the correct answer
+}
+
+@gmf.node(label="name", tool.name="Planning",
+			tool.small.bundle="org.chico.uclm.teaw.figures", tool.small.path="images/planning_arasaac32.png")
+class Planning extends Node {
+	attr String name = "<Planning ...>";
+	@gmf.compartment(layout="free", collapsible="false")
+	val PlanningNode[*] planningNodes;
+	val NormalLink[*] normalLinks;
+}
+
+/*
+* PICTOS
+*/
+class Picto extends PlanningNode {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.PersonFigure", tool.name="Person",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/person_arasaac128.png", tool.small.path="images/person_arasaac32.png",
+	label.placement="none", resizable="false", size="128,128")
+class Person extends Picto {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.ActionFigure", tool.name="Action",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/action_arasaac128.png", tool.small.path="images/action_arasaac32.png",
+	label.placement="none", resizable="true", size="128,128")
+class Action extends Picto {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.PlaceFigure", tool.name="Place",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/place_arasaac128.png", tool.small.path="images/place_arasaac32.png",
+	label.placement="none", resizable="false", size="128,128")
+class Place extends Picto {
+}
+
+/*
+* TRANSICIONES
+*/
+class Transiction extends PlanningNode {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.TimeFigure", tool.name="Time management",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/time_arasaac64.png", tool.small.path="images/time_arasaac32.png",
+	label.placement="none", resizable="false", size="64,64")
+class WaitTime extends Transiction {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.PrizeFigure", tool.name="Award",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/prize_arasaac64.png", tool.small.path="images/prize_arasaac32.png",
+	label.placement="none", resizable="false", size="64,64")
+class Prize extends Transiction {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.StoryFigure", tool.name="Social story",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/story_arasaac64.png", tool.small.path="images/story_arasaac32.png",
+	label.placement="none", resizable="false", size="64,64")
+class SocialStory extends Transiction {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.ObjectFigure", tool.name="Entertainment/Calming activity",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/object_arasaac64.png", tool.small.path="images/object_arasaac32.png",
+	label.placement="none", resizable="false", size="64,64")
+class SoothingObject extends Transiction {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.RemainingFigure", tool.name="Remaining time",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/remaining_arasaac64.png", tool.small.path="images/remaining_arasaac32.png",
+	label.placement="none", resizable="false", size="64,64")
+class ReaminingObject extends Transiction {
+}
+
+// CUADERNO DE COMUNICACION
+@gmf.node(figure="org.chico.uclm.teaw.figures.NotebookFigure", tool.name="AAC Notebook",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/notebook_arasaac64.png", tool.small.path="images/notebook_arasaac32.png",
+	label.placement="none", resizable="false", size="64,64")
+class CommunicationBook extends PlanningNode {
+}
+
+
+/*
+* NODOS DIAGRAMA EMOCIONES
+*/
+abstract class EmotionsPicto extends EmotionsNode {
+	attr String description;
+	attr String imagePath;
+	attr Integer size;
+}
+
+abstract class Feedback extends EmotionsNode {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.EmotionChoiceFigure", tool.name="Target emotion",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emochoice_arasaac128.png", tool.small.path="images/emochoice_arasaac32.png",
+	label.placement="none", resizable="false", size="128,128")
+class EmotionChoice extends EmotionsPicto {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.EmotionFigure", tool.name="Response option",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emotion_arasaac128.png", tool.small.path="images/emotion_arasaac32.png",
+	label.placement="none", resizable="false", size="128,128")
+class Emotion extends EmotionsPicto {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.PosFeedbackFigure", tool.name="Positive feedback",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/positiveFeedback64.png", tool.small.path="images/positiveFeedback32.png",
+	label.placement="none", resizable="false", size="64,64")
+class PositiveFeedback extends Feedback {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.NegFeedbackFigure", tool.name="Negative feedback",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/negativeFeedback64.png", tool.small.path="images/negativeFeedback32.png",
+	label.placement="none", resizable="false", size="64,64")
+class NegativeFeedback extends Feedback {
+}
+
+
+/*
+* LINKS
+*/ 
+abstract class Link{}
+
+@gmf.link(source="origin", target="target", tool.name="Sequence/order", style="solid", width="3", color="82,82,82",
+			tool.small.bundle="org.chico.uclm.teaw.figures", tool.small.path="images/link32.png",
+			source.constraint="self <> oppositeEnd",target.constraint="self <> oppositeEnd", target.decoration="filledclosedarrow")
+class NormalLink extends Link {
+	ref Picto[1] origin;
+	ref Picto[1] target;
+}
+
+@gmf.link(source="origin", target="target", tool.name="Incorrect solution", style="solid", width="2", color="233,34,43",
+			tool.small.bundle="org.chico.uclm.teaw.figures", tool.small.path="images/wrong32.png",
+			source.constraint="self <> oppositeEnd",target.constraint="self <> oppositeEnd")
+class RedLink extends Link {
+	ref EmotionChoice[1] origin;
+	ref Emotion[1] target;
+	ref Feedback[1] npFeedback;
+}
+
+@gmf.link(source="origin", target="target", tool.name="Correct solution", style="solid", width="2", color="0,217,60",
+			tool.small.bundle="org.chico.uclm.teaw.figures", tool.small.path="images/ok32.png",
+			source.constraint="self <> oppositeEnd",target.constraint="self <> oppositeEnd")
+class GreenLink extends Link {
+	ref EmotionChoice[1] origin;
+	ref Emotion[1] target;
+	ref Feedback[1] npFeedback;
+}

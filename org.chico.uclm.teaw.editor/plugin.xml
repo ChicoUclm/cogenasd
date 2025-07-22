@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated teaw -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="teaw.presentation.TeawModelWizardID"
+            name="%_UI_TeawModelWizard_label"
+            class="teaw.presentation.TeawModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TeawModelFile.gif">
+         <description>%_UI_TeawModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated teaw -->
+      <editor
+            id="teaw.presentation.TeawEditorID"
+            name="%_UI_TeawEditor_label"
+            icon="icons/full/obj16/TeawModelFile.gif"
+            extensions="teaw"
+            class="teaw.presentation.TeawEditor"
+            contributorClass="teaw.presentation.TeawActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

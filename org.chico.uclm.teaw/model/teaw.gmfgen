@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgen:GenEditorGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" copyrightText="">
+  <diagram visualID="1000" editPartClassName="TEAWDiagramEditPart" itemSemanticEditPolicyClassName="TEAWDiagramItemSemanticEditPolicy" canonicalEditPolicyClassName="TEAWDiagramCanonicalEditPolicy" iconProviderPriority="Low" validationProviderPriority="Low" validationEnabled="true" validationDecorators="true" liveValidationUIFeedback="true">
+    <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TEAWDiagramEditHelper"/>
+    <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <containsShortcutsTo>teaw</containsShortcutsTo>
+    <shortcutsProvidedFor>teaw</shortcutsProvidedFor>
+    <domainDiagramElement href="teaw.genmodel#//teaw/TEAWDiagram"/>
+    <childNodes visualID="3001" editPartClassName="EmotionChoiceEditPart" itemSemanticEditPolicyClassName="EmotionChoiceItemSemanticEditPolicy" canonicalEditPolicyClassName="EmotionChoiceCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EmotionChoiceGraphicalNodeEditPolicy" createCommandClassName="EmotionChoiceCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EmotionChoiceEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EmotionChoiceFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EmotionChoiceFigure extends org.chico.uclm.teaw.figures.EmotionChoiceFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EmotionChoiceFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(128)&#xA;, getMapMode().DPtoLP(128)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="128" height="128"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/EmotionChoice"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3002" editPartClassName="EmotionEditPart" itemSemanticEditPolicyClassName="EmotionItemSemanticEditPolicy" canonicalEditPolicyClassName="EmotionCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EmotionGraphicalNodeEditPolicy" createCommandClassName="EmotionCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EmotionEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EmotionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EmotionFigure extends org.chico.uclm.teaw.figures.EmotionFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EmotionFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(128)&#xA;, getMapMode().DPtoLP(128)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="128" height="128"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/Emotion"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3011" editPartClassName="PositiveFeedbackEditPart" itemSemanticEditPolicyClassName="PositiveFeedbackItemSemanticEditPolicy" canonicalEditPolicyClassName="PositiveFeedbackCanonicalEditPolicy" graphicalNodeEditPolicyClassName="PositiveFeedbackGraphicalNodeEditPolicy" createCommandClassName="PositiveFeedbackCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PositiveFeedbackEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="PositiveFeedbackFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PositiveFeedbackFigure extends org.chico.uclm.teaw.figures.PosFeedbackFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PositiveFeedbackFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/PositiveFeedback"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3012" editPartClassName="NegativeFeedbackEditPart" itemSemanticEditPolicyClassName="NegativeFeedbackItemSemanticEditPolicy" canonicalEditPolicyClassName="NegativeFeedbackCanonicalEditPolicy" graphicalNodeEditPolicyClassName="NegativeFeedbackGraphicalNodeEditPolicy" createCommandClassName="NegativeFeedbackCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="NegativeFeedbackEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="NegativeFeedbackFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class NegativeFeedbackFigure extends org.chico.uclm.teaw.figures.NegFeedbackFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public NegativeFeedbackFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/NegativeFeedback"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3003" editPartClassName="PersonEditPart" itemSemanticEditPolicyClassName="PersonItemSemanticEditPolicy" canonicalEditPolicyClassName="PersonCanonicalEditPolicy" graphicalNodeEditPolicyClassName="PersonGraphicalNodeEditPolicy" createCommandClassName="PersonCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PersonEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="PersonFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PersonFigure extends org.chico.uclm.teaw.figures.PersonFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PersonFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(128)&#xA;, getMapMode().DPtoLP(128)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="128" height="128"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/Person"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3004" editPartClassName="ActionEditPart" itemSemanticEditPolicyClassName="ActionItemSemanticEditPolicy" canonicalEditPolicyClassName="ActionCanonicalEditPolicy" graphicalNodeEditPolicyClassName="ActionGraphicalNodeEditPolicy" createCommandClassName="ActionCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ActionEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ActionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ActionFigure extends org.chico.uclm.teaw.figures.ActionFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ActionFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(128)&#xA;, getMapMode().DPtoLP(128)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="128" height="128"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/Action"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3005" editPartClassName="PlaceEditPart" itemSemanticEditPolicyClassName="PlaceItemSemanticEditPolicy" canonicalEditPolicyClassName="PlaceCanonicalEditPolicy" graphicalNodeEditPolicyClassName="PlaceGraphicalNodeEditPolicy" createCommandClassName="PlaceCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PlaceEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="PlaceFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PlaceFigure extends org.chico.uclm.teaw.figures.PlaceFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PlaceFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(128)&#xA;, getMapMode().DPtoLP(128)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="128" height="128"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/Place"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3006" editPartClassName="WaitTimeEditPart" itemSemanticEditPolicyClassName="WaitTimeItemSemanticEditPolicy" canonicalEditPolicyClassName="WaitTimeCanonicalEditPolicy" graphicalNodeEditPolicyClassName="WaitTimeGraphicalNodeEditPolicy" createCommandClassName="WaitTimeCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="WaitTimeEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="WaitTimeFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class WaitTimeFigure extends org.chico.uclm.teaw.figures.TimeFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public WaitTimeFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/WaitTime"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3007" editPartClassName="PrizeEditPart" itemSemanticEditPolicyClassName="PrizeItemSemanticEditPolicy" canonicalEditPolicyClassName="PrizeCanonicalEditPolicy" graphicalNodeEditPolicyClassName="PrizeGraphicalNodeEditPolicy" createCommandClassName="PrizeCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PrizeEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="PrizeFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PrizeFigure extends org.chico.uclm.teaw.figures.PrizeFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PrizeFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/Prize"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3008" editPartClassName="SocialStoryEditPart" itemSemanticEditPolicyClassName="SocialStoryItemSemanticEditPolicy" canonicalEditPolicyClassName="SocialStoryCanonicalEditPolicy" graphicalNodeEditPolicyClassName="SocialStoryGraphicalNodeEditPolicy" createCommandClassName="SocialStoryCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="SocialStoryEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="SocialStoryFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SocialStoryFigure extends org.chico.uclm.teaw.figures.StoryFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SocialStoryFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/SocialStory"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3009" editPartClassName="SoothingObjectEditPart" itemSemanticEditPolicyClassName="SoothingObjectItemSemanticEditPolicy" canonicalEditPolicyClassName="SoothingObjectCanonicalEditPolicy" graphicalNodeEditPolicyClassName="SoothingObjectGraphicalNodeEditPolicy" createCommandClassName="SoothingObjectCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="SoothingObjectEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="SoothingObjectFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SoothingObjectFigure extends org.chico.uclm.teaw.figures.ObjectFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SoothingObjectFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/SoothingObject"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3013" editPartClassName="ReaminingObjectEditPart" itemSemanticEditPolicyClassName="ReaminingObjectItemSemanticEditPolicy" canonicalEditPolicyClassName="ReaminingObjectCanonicalEditPolicy" graphicalNodeEditPolicyClassName="ReaminingObjectGraphicalNodeEditPolicy" createCommandClassName="ReaminingObjectCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ReaminingObjectEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ReaminingObjectFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ReaminingObjectFigure extends org.chico.uclm.teaw.figures.RemainingFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ReaminingObjectFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/ReaminingObject"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3010" editPartClassName="CommunicationBookEditPart" itemSemanticEditPolicyClassName="CommunicationBookItemSemanticEditPolicy" canonicalEditPolicyClassName="CommunicationBookCanonicalEditPolicy" graphicalNodeEditPolicyClassName="CommunicationBookGraphicalNodeEditPolicy" createCommandClassName="CommunicationBookCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="CommunicationBookEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="CommunicationBookFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CommunicationBookFigure extends org.chico.uclm.teaw.figures.NotebookFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CommunicationBookFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/CommunicationBook"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
+      </modelFacet>
+    </childNodes>
+    <topLevelNodes visualID="2001" editPartClassName="EmotionsEditPart" itemSemanticEditPolicyClassName="EmotionsItemSemanticEditPolicy" canonicalEditPolicyClassName="EmotionsCanonicalEditPolicy" compartments="//@diagram/@compartments.0" graphicalNodeEditPolicyClassName="EmotionsGraphicalNodeEditPolicy" createCommandClassName="EmotionsCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EmotionsEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EmotionsFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EmotionsFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEmotionsLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fEmotionsEmotionsCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EmotionsFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEmotionsLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureEmotionsLabelFigure.setText(&quot;Emotions&quot;);&#xA;fFigureEmotionsLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureEmotionsLabelFigure);&#xA;&#xA;&#xA;&#xA;fEmotionsEmotionsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fEmotionsEmotionsCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fEmotionsEmotionsCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEmotionsLabelFigure() {&#xA;&#x9;&#x9;return fFigureEmotionsLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getEmotionsEmotionsCompartmentFigure() {&#xA;&#x9;&#x9;return fEmotionsEmotionsCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/Emotions"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
+      </modelFacet>
+      <labels visualID="5001" editPartClassName="EmotionsNameEditPart" itemSemanticEditPolicyClassName="EmotionsNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureEmotionsLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="teaw.genmodel#//teaw/Emotions/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <topLevelNodes visualID="2002" editPartClassName="PlanningEditPart" itemSemanticEditPolicyClassName="PlanningItemSemanticEditPolicy" canonicalEditPolicyClassName="PlanningCanonicalEditPolicy" compartments="//@diagram/@compartments.1" graphicalNodeEditPolicyClassName="PlanningGraphicalNodeEditPolicy" createCommandClassName="PlanningCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PlanningEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="PlanningFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PlanningFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePlanningLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fPlanningPlanningNodesCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PlanningFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePlanningLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePlanningLabelFigure.setText(&quot;Planning&quot;);&#xA;fFigurePlanningLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigurePlanningLabelFigure);&#xA;&#xA;&#xA;&#xA;fPlanningPlanningNodesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fPlanningPlanningNodesCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fPlanningPlanningNodesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePlanningLabelFigure() {&#xA;&#x9;&#x9;return fFigurePlanningLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getPlanningPlanningNodesCompartmentFigure() {&#xA;&#x9;&#x9;return fPlanningPlanningNodesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/Planning"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
+      </modelFacet>
+      <labels visualID="5002" editPartClassName="PlanningNameEditPart" itemSemanticEditPolicyClassName="PlanningNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigurePlanningLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="teaw.genmodel#//teaw/Planning/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <links visualID="4001" editPartClassName="NormalLinkEditPart" itemSemanticEditPolicyClassName="NormalLinkItemSemanticEditPolicy" createCommandClassName="NormalLinkCreateCommand" reorientCommandClassName="NormalLinkReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="NormalLinkEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="NormalLinkFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class NormalLinkFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public NormalLinkFigure() {&#xA;&#x9;&#x9;this.setLineWidth(3);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolygonDecoration df = new org.eclipse.draw2d.PolygonDecoration();&#xA;df.setFill(true);&#xA;org.eclipse.draw2d.geometry.PointList pl = new org.eclipse.draw2d.geometry.PointList();&#xA;pl.addPoint(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-2)&#xA;, getMapMode().DPtoLP(2)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-2)&#xA;, getMapMode().DPtoLP(-2)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;df.setTemplate(pl);&#xA;df.setScale(getMapMode().DPtoLP(7)&#xA;, getMapMode().DPtoLP(3)&#xA;);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 82, 82, 82);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true"/>
+      </viewmap>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="teaw.genmodel#//teaw/NormalLink"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Planning/normalLinks"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Planning/normalLinks"/>
+        <sourceMetaFeature href="teaw.genmodel#//teaw/NormalLink/origin"/>
+        <targetMetaFeature href="teaw.genmodel#//teaw/NormalLink/target"/>
+      </modelFacet>
+      <creationConstraints sourceEnd="//@expressionProviders/@providers.0/@expressions.0" targetEnd="//@expressionProviders/@providers.0/@expressions.1"/>
+    </links>
+    <links visualID="4002" editPartClassName="RedLinkEditPart" itemSemanticEditPolicyClassName="RedLinkItemSemanticEditPolicy" createCommandClassName="RedLinkCreateCommand" reorientCommandClassName="RedLinkReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="RedLinkEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="RedLinkFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RedLinkFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RedLinkFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 233, 34, 43);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true"/>
+      </viewmap>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="teaw.genmodel#//teaw/RedLink"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/redLinks"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/redLinks"/>
+        <sourceMetaFeature href="teaw.genmodel#//teaw/RedLink/origin"/>
+        <targetMetaFeature href="teaw.genmodel#//teaw/RedLink/target"/>
+      </modelFacet>
+      <creationConstraints sourceEnd="//@expressionProviders/@providers.0/@expressions.2" targetEnd="//@expressionProviders/@providers.0/@expressions.3"/>
+    </links>
+    <links visualID="4003" editPartClassName="GreenLinkEditPart" itemSemanticEditPolicyClassName="GreenLinkItemSemanticEditPolicy" createCommandClassName="GreenLinkCreateCommand" reorientCommandClassName="GreenLinkReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="GreenLinkEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="GreenLinkFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class GreenLinkFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public GreenLinkFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 217, 60);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true"/>
+      </viewmap>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="teaw.genmodel#//teaw/GreenLink"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/greenLink"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/greenLink"/>
+        <sourceMetaFeature href="teaw.genmodel#//teaw/GreenLink/origin"/>
+        <targetMetaFeature href="teaw.genmodel#//teaw/GreenLink/target"/>
+      </modelFacet>
+      <creationConstraints sourceEnd="//@expressionProviders/@providers.0/@expressions.4" targetEnd="//@expressionProviders/@providers.0/@expressions.5"/>
+    </links>
+    <compartments visualID="7001" editPartClassName="EmotionsEmotionsEmotionsCompartmentEditPart" itemSemanticEditPolicyClassName="EmotionsEmotionsEmotionsCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="EmotionsEmotionsEmotionsCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.2 //@diagram/@childNodes.3" title="EmotionsEmotionsCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.0" listLayout="false">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getEmotionsEmotionsCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7002" editPartClassName="PlanningPlanningPlanningNodesCompartmentEditPart" itemSemanticEditPolicyClassName="PlanningPlanningPlanningNodesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="PlanningPlanningPlanningNodesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.4 //@diagram/@childNodes.5 //@diagram/@childNodes.6 //@diagram/@childNodes.7 //@diagram/@childNodes.8 //@diagram/@childNodes.9 //@diagram/@childNodes.10 //@diagram/@childNodes.11 //@diagram/@childNodes.12" title="PlanningPlanningNodesCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.1" listLayout="false">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getPlanningPlanningNodesCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <palette>
+      <groups title="Planning" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Planning" description="Create new Planning" smallIconPath="/org.chico.uclm.teaw.figures/images/planning_arasaac32.png" genNodes="//@diagram/@topLevelNodes.1"/>
+        <entries xsi:type="gmfgen:Separator"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Action" description="Create new Action" largeIconPath="images/action_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/action_arasaac32.png" genNodes="//@diagram/@childNodes.5"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Person" description="Create new Person" largeIconPath="images/person_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/person_arasaac32.png" genNodes="//@diagram/@childNodes.4"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Place" description="Create new Place" largeIconPath="images/place_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/place_arasaac32.png" genNodes="//@diagram/@childNodes.6"/>
+        <entries xsi:type="gmfgen:Separator"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="AAC Notebook" description="Create new AAC Notebook" largeIconPath="images/notebook_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/notebook_arasaac32.png" genNodes="//@diagram/@childNodes.12"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Award" description="Create new Award" largeIconPath="images/prize_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/prize_arasaac32.png" genNodes="//@diagram/@childNodes.8"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Social story" description="Create new Social story" largeIconPath="images/story_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/story_arasaac32.png" genNodes="//@diagram/@childNodes.9"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Entertainment/Calming activity" description="Create new Entertainment/Calming activity" largeIconPath="images/object_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/object_arasaac32.png" genNodes="//@diagram/@childNodes.10"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Time management" description="Create new Time management" largeIconPath="images/time_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/time_arasaac32.png" genNodes="//@diagram/@childNodes.7"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Remaining time" description="Create new Remaining time" largeIconPath="images/remaining_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/remaining_arasaac32.png" genNodes="//@diagram/@childNodes.11"/>
+        <entries xsi:type="gmfgen:Separator"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Sequence/order" description="Create new Sequence/order" smallIconPath="/org.chico.uclm.teaw.figures/images/link32.png" genLinks="//@diagram/@links.0"/>
+      </groups>
+      <groups title="Emotions" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Emotions" description="Create new Emotions" smallIconPath="/org.chico.uclm.teaw.figures/images/emotions_arasaac32.png" genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries xsi:type="gmfgen:Separator"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Target emotion" description="Create new Target emotion" largeIconPath="images/emochoice_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/emochoice_arasaac32.png" genNodes="//@diagram/@childNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Response option" description="Create new Response option" largeIconPath="images/emotion_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/emotion_arasaac32.png" genNodes="//@diagram/@childNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Positive feedback" description="Create new Positive feedback" largeIconPath="images/positiveFeedback64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/positiveFeedback32.png" genNodes="//@diagram/@childNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Negative feedback" description="Create new Negative feedback" largeIconPath="images/negativeFeedback64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/negativeFeedback32.png" genNodes="//@diagram/@childNodes.3"/>
+        <entries xsi:type="gmfgen:Separator"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Correct solution" description="Create new Correct solution" smallIconPath="/org.chico.uclm.teaw.figures/images/ok32.png" genLinks="//@diagram/@links.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Incorrect solution" description="Create new Incorrect solution" smallIconPath="/org.chico.uclm.teaw.figures/images/wrong32.png" genLinks="//@diagram/@links.1"/>
+      </groups>
+    </palette>
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="org.chico.uclm.teaw.diagram.general" name="Teaw Diagram">
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="org.chico.uclm.teaw.diagram.appearance" name="Appearance" kind="Appearance"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="org.chico.uclm.teaw.diagram.connections" name="Connections" kind="Connections"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="org.chico.uclm.teaw.diagram.printing" name="Printing" kind="Printing"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="org.chico.uclm.teaw.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
+    </preferencePages>
+  </diagram>
+  <plugin printingEnabled="true">
+    <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
+    <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
+    <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
+    <requiredPlugins>org.chico.uclm.teaw.figures</requiredPlugins>
+  </plugin>
+  <editor/>
+  <navigator>
+    <childReferences child="//@diagram"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.0"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.1"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.2"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.3"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.0"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.4"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.5"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.6"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.7"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.8"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.9"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.10"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.11"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.12"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.4" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.4" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.5" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.5" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.6" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.6" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.4" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.4" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.5" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.5" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.6" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.6" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@childNodes.1" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@childNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.2" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@childNodes.1" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@childNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+  </navigator>
+  <diagramUpdater/>
+  <propertySheet>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="appearance"/>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="diagram"/>
+    <tabs xsi:type="gmfgen:GenCustomPropertyTab" iD="domain" label="Core">
+      <filter xsi:type="gmfgen:TypeTabFilter">
+        <types>org.eclipse.gmf.runtime.notation.View</types>
+        <types>org.eclipse.gef.EditPart</types>
+        <generatedTypes>abstractNavigatorItem</generatedTypes>
+      </filter>
+    </tabs>
+  </propertySheet>
+  <domainGenModel href="teaw.genmodel#/"/>
+  <expressionProviders>
+    <providers xsi:type="gmfgen:GenExpressionInterpreter">
+      <expressions xsi:type="gmfgen:GenConstraint" body="self &lt;> oppositeEnd"/>
+      <expressions xsi:type="gmfgen:GenConstraint" body="self &lt;> oppositeEnd"/>
+      <expressions xsi:type="gmfgen:GenConstraint" body="self &lt;> oppositeEnd"/>
+      <expressions xsi:type="gmfgen:GenConstraint" body="self &lt;> oppositeEnd"/>
+      <expressions xsi:type="gmfgen:GenConstraint" body="self &lt;> oppositeEnd"/>
+      <expressions xsi:type="gmfgen:GenConstraint" body="self &lt;> oppositeEnd"/>
+    </providers>
+  </expressionProviders>
+  <labelParsers extensibleViaService="true">
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
+  </labelParsers>
+  <contextMenus context="//@diagram">
+    <items xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
+</gmfgen:GenEditorGenerator>

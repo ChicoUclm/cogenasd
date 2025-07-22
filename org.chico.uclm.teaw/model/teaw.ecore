@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="teaw" nsURI="teaw" nsPrefix="teaw">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TEAWDiagram">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itsNodes" upperBound="-1"
+        eType="#//Node" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PlanningNode" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Order"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmotionsNode" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Order">
+    <eLiterals name="None"/>
+    <eLiterals name="First" value="1"/>
+    <eLiterals name="Second" value="2"/>
+    <eLiterals name="Third" value="3"/>
+    <eLiterals name="Fourth" value="4"/>
+    <eLiterals name="Fifth" value="5"/>
+    <eLiterals name="Sixth" value="6"/>
+    <eLiterals name="Seventh" value="7"/>
+    <eLiterals name="Eighth" value="8"/>
+    <eLiterals name="Ninth" value="9"/>
+    <eLiterals name="Tenth" value="10"/>
+    <eLiterals name="Eleventh" value="11"/>
+    <eLiterals name="Twelfth" value="12"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Emotions" eSuperTypes="#//Node">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="tool.name" value="Emotions"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.small.path" value="images/emotions_arasaac32.png"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&lt;Emotions ...>"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emotions" upperBound="-1"
+        eType="#//EmotionsNode" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="free"/>
+        <details key="collapsible" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="redLinks" upperBound="-1"
+        eType="#//RedLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="greenLink" lowerBound="1"
+        eType="#//GreenLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Planning" eSuperTypes="#//Node">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="tool.name" value="Planning"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.small.path" value="images/planning_arasaac32.png"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&lt;Planning ...>"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planningNodes" upperBound="-1"
+        eType="#//PlanningNode" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="free"/>
+        <details key="collapsible" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="normalLinks" upperBound="-1"
+        eType="#//NormalLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Picto" eSuperTypes="#//PlanningNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Picto">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.PersonFigure"/>
+      <details key="tool.name" value="Person"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/person_arasaac128.png"/>
+      <details key="tool.small.path" value="images/person_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="128,128"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Picto">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.ActionFigure"/>
+      <details key="tool.name" value="Action"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/action_arasaac128.png"/>
+      <details key="tool.small.path" value="images/action_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="true"/>
+      <details key="size" value="128,128"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//Picto">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.PlaceFigure"/>
+      <details key="tool.name" value="Place"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/place_arasaac128.png"/>
+      <details key="tool.small.path" value="images/place_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="128,128"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transiction" eSuperTypes="#//PlanningNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WaitTime" eSuperTypes="#//Transiction">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.TimeFigure"/>
+      <details key="tool.name" value="Time management"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/time_arasaac64.png"/>
+      <details key="tool.small.path" value="images/time_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Prize" eSuperTypes="#//Transiction">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.PrizeFigure"/>
+      <details key="tool.name" value="Award"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/prize_arasaac64.png"/>
+      <details key="tool.small.path" value="images/prize_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SocialStory" eSuperTypes="#//Transiction">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.StoryFigure"/>
+      <details key="tool.name" value="Social story"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/story_arasaac64.png"/>
+      <details key="tool.small.path" value="images/story_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SoothingObject" eSuperTypes="#//Transiction">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.ObjectFigure"/>
+      <details key="tool.name" value="Entertainment/Calming activity"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/object_arasaac64.png"/>
+      <details key="tool.small.path" value="images/object_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReaminingObject" eSuperTypes="#//Transiction">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.RemainingFigure"/>
+      <details key="tool.name" value="Remaining time"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/remaining_arasaac64.png"/>
+      <details key="tool.small.path" value="images/remaining_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationBook" eSuperTypes="#//PlanningNode">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.NotebookFigure"/>
+      <details key="tool.name" value="AAC Notebook"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/notebook_arasaac64.png"/>
+      <details key="tool.small.path" value="images/notebook_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmotionsPicto" abstract="true" eSuperTypes="#//EmotionsNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Feedback" abstract="true" eSuperTypes="#//EmotionsNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EmotionChoice" eSuperTypes="#//EmotionsPicto">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.EmotionChoiceFigure"/>
+      <details key="tool.name" value="Target emotion"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/emochoice_arasaac128.png"/>
+      <details key="tool.small.path" value="images/emochoice_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="128,128"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Emotion" eSuperTypes="#//EmotionsPicto">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.EmotionFigure"/>
+      <details key="tool.name" value="Response option"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/emotion_arasaac128.png"/>
+      <details key="tool.small.path" value="images/emotion_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="128,128"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositiveFeedback" eSuperTypes="#//Feedback">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.PosFeedbackFigure"/>
+      <details key="tool.name" value="Positive feedback"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/positiveFeedback64.png"/>
+      <details key="tool.small.path" value="images/positiveFeedback32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NegativeFeedback" eSuperTypes="#//Feedback">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.NegFeedbackFigure"/>
+      <details key="tool.name" value="Negative feedback"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/negativeFeedback64.png"/>
+      <details key="tool.small.path" value="images/negativeFeedback32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NormalLink" eSuperTypes="#//Link">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="origin"/>
+      <details key="target" value="target"/>
+      <details key="tool.name" value="Sequence/order"/>
+      <details key="style" value="solid"/>
+      <details key="width" value="3"/>
+      <details key="color" value="82,82,82"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.small.path" value="images/link32.png"/>
+      <details key="source.constraint" value="self &lt;> oppositeEnd"/>
+      <details key="target.constraint" value="self &lt;> oppositeEnd"/>
+      <details key="target.decoration" value="filledclosedarrow"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" lowerBound="1"
+        eType="#//Picto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Picto"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RedLink" eSuperTypes="#//Link">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="origin"/>
+      <details key="target" value="target"/>
+      <details key="tool.name" value="Incorrect solution"/>
+      <details key="style" value="solid"/>
+      <details key="width" value="2"/>
+      <details key="color" value="233,34,43"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.small.path" value="images/wrong32.png"/>
+      <details key="source.constraint" value="self &lt;> oppositeEnd"/>
+      <details key="target.constraint" value="self &lt;> oppositeEnd"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" lowerBound="1"
+        eType="#//EmotionChoice"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Emotion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="npFeedback" lowerBound="1"
+        eType="#//Feedback"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GreenLink" eSuperTypes="#//Link">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="origin"/>
+      <details key="target" value="target"/>
+      <details key="tool.name" value="Correct solution"/>
+      <details key="style" value="solid"/>
+      <details key="width" value="2"/>
+      <details key="color" value="0,217,60"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.small.path" value="images/ok32.png"/>
+      <details key="source.constraint" value="self &lt;> oppositeEnd"/>
+      <details key="target.constraint" value="self &lt;> oppositeEnd"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" lowerBound="1"
+        eType="#//EmotionChoice"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Emotion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="npFeedback" lowerBound="1"
+        eType="#//Feedback"/>
+  </eClassifiers>
+</ecore:EPackage>
