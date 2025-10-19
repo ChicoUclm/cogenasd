@@ -59,7 +59,7 @@ CogenASD/<br>
 │<br>
 ├── CoGenASD_Multitouch/    # OUTPUT DIRECTORY: Generated web application code<br>
 │   ├── index.html<br>
-│   ├── css/<br>            # Stylesheets for different devices<br>
+│   ├── css/                # Stylesheets for different devices<br>
 │   └── js/                 # Contains the GoJS implementation<br>
 │   └── template/           # Contains the EGL/EGX transformation files for final generation of code<br>
 │<br>
